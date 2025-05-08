@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMIA - Player MVP</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="player-container">
+        <!-- Secção de Autenticação Real -->
+        <div id="real-auth-section">
+            <div class="auth-form-wrapper" id="login-form-container">
+                <div class="logo-container-auth">
+                    <img src="assets/logo_the_vox_branco.png" alt="Logo The Vox Mídia Criativa">
+                </div>
+                <h2>Login</h2>
+                <label for="login-email">Usuário</label>
+                <input type="email" id="login-email" placeholder="Seu email" required>
+                <label for="login-password">Senha</label>
+                <input type="password" id="login-password" placeholder="Sua senha" required>
+                <button id="login-button-real">Entrar</button>
+                <p id="login-error" class="error-message" style="display:none;"></p>
+                <div class="auth-links">
+                    <p>Não tem conta? <a href="#" id="show-register-link">Registe-se</a></p>
+                    <p><a href="#" id="show-password-reset-link">Esqueceu-se da password?</a></p>
+                </div>
+            </div>
+
+            <div class="auth-form-wrapper" id="register-form-container" style="display:none;">
+                <div class="logo-container-auth">
+                    <img src="assets/logo_the_vox_branco.png" alt="Logo The Vox Mídia Criativa">
+                </div>
+                <h2>Registo</h2>
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" placeholder="Seu email" required>
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" placeholder="Mín. 6 caracteres" required>
+                <label for="register-confirm-password">Confirmar Password</label>
+                <input type="password" id="register-confirm-password" placeholder="Confirme a senha" required>
+                <button id="register-button-real">Registar</button>
+                <p id="register-error" class="error-message" style="display:none;"></p>
+                <div class="auth-links">
+                    <p>Já tem conta? <a href="#" id="show-login-link">Login</a></p>
+                </div>
+            </div>
+            
+            <div class="auth-form-wrapper" id="password-reset-form-container" style="display:none;">
+                <div class="logo-container-auth">
+                    <img src="assets/logo_the_vox_branco.png" alt="Logo The Vox Mídia Criativa">
+                </div>
+                <h2>Recuperar Password</h2>
+                <label for="reset-email">Email</label>
+                <input type="email" id="reset-email" placeholder="Seu email de registo" required>
+                <button id="password-reset-button">Enviar Email de Recuperação</button>
+                <p id="reset-message" class="info-message" style="display:none;"></p>
+                <div class="auth-links">
+                    <p><a href="#" id="back-to-login-link">Voltar ao Login</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="user-dashboard" style="display:none;">
+            <div class="logo-container-auth">
+                 <img src="assets/logo_the_vox_branco.png" alt="Logo The Vox Mídia Criativa">
+            </div>
+            <h2>Bem-vindo, <span id="user-email-display"></span>!</h2>
+            <button id="logout-button">Sair</button>
+            <p>O seu painel de controlo aparecerá aqui em breve.</p>
+        </div>
+        
+        <!-- Outras secções (manter para futura integração, adaptar conforme papéis) -->
+        <div id="spotify-auth-section" style="display: none;">
+            <h2>Autenticação Spotify</h2>
+            <button id="spotify-login-button">Ligar ao Spotify</button>
+            <p id="spotify-auth-status">Estado: Não autenticado</p>
+        </div>
+        <div id="admin-interface-section" style="display: none;">
+            <h2>Interface de Administração</h2>
+        </div>
+        <div id="media-info" style="display: none;">
+            <p>A carregar...</p>
+        </div>
+        <div class="controls" style="display: none;">
+            <button id="play-pause-button" disabled>Play</button>
+            <button id="stop-button" disabled>Stop</button>
+        </div>
+        <div id="debug-log" style="display:none;">
+            <h2>Log de Eventos:</h2>
+            <ul id="log-list"></ul>
+        </div>
+    </div>
+    
+    <script type="module" src="js/player.js"></script>
+</body>
+</html>
+
