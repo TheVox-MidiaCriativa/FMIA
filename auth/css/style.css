@@ -1,0 +1,235 @@
+/* Cores da Identidade Visual:
+#69FFF1 (azul claro)
+#001524 (azul escuro - fundo)
+#FF7D00 (laranja)
+#E8E1EF (lilás claro - texto)
+#FFFFFF (branco)
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #001524; /* Fundo escuro */
+    margin: 0;
+    color: #E8E1EF; /* Texto lilás claro */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.player-container {
+    background-color: #001F33; /* Um tom ligeiramente mais claro que o fundo para o container */
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Largura ajustada para formulários de auth */
+}
+
+/* Estilos para os formulários de autenticação */
+.auth-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo do formulário */
+}
+
+.logo-container-auth {
+    margin-bottom: 20px;
+}
+
+.logo-container-auth img {
+    max-width: 180px;
+    height: auto;
+}
+
+.auth-form-wrapper h2 {
+    color: #FFFFFF; /* Branco para subtítulos */
+    font-size: 1.5em; /* Aumentar um pouco o H2 dos forms */
+    margin-top: 0; /* Remover margem de cima se o logo já dá espaço */
+    margin-bottom: 20px;
+}
+
+.auth-form-wrapper label {
+    display: block;
+    text-align: left;
+    width: 100%;
+    max-width: 320px; /* Largura dos inputs */
+    margin-bottom: 5px;
+    color: #E8E1EF;
+    font-size: 0.9em;
+}
+
+.auth-form-wrapper input[type="email"],
+.auth-form-wrapper input[type="password"] {
+    background-color: #002b49; /* Fundo do input mais escuro */
+    color: #E8E1EF;
+    border: 1px solid #69FFF1;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 320px; /* Largura dos inputs */
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.auth-form-wrapper input[type="email"]::placeholder,
+.auth-form-wrapper input[type="password"]::placeholder {
+    color: #b0c7d1; /* Cor do placeholder mais clara */
+}
+
+.auth-form-wrapper button {
+    background-color: #FF7D00; /* Laranja para botões principais */
+    color: #FFFFFF; /* Texto branco para melhor contraste com laranja */
+    font-weight: bold;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 10px; /* Espaço acima do botão */
+    margin-bottom: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    max-width: 320px; /* Largura dos inputs */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-form-wrapper button:hover {
+    background-color: #E86A00; /* Laranja mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+.auth-links {
+    margin-top: 15px;
+}
+
+.auth-links p {
+    margin: 8px 0;
+    font-size: 0.9em;
+}
+
+.auth-links a {
+    color: #69FFF1; /* Azul claro para links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #FF4B4B; /* Vermelho para mensagens de erro */
+    background-color: rgba(255, 75, 75, 0.1);
+    border: 1px solid #FF4B4B;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    width: 100%;
+    max-width: 320px; /* Largura dos inputs */
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.info-message, /* Para mensagens de reset password, etc. */
+.success-message {
+    color: #69FFF1; /* Azul claro para mensagens de informação/sucesso */
+    background-color: rgba(105, 255, 241, 0.1);
+    border: 1px solid #69FFF1;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    width: 100%;
+    max-width: 320px; /* Largura dos inputs */
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Estilos para o Dashboard do Utilizador */
+#user-dashboard {
+    text-align: center;
+}
+
+#user-dashboard h2 {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+#user-dashboard p {
+    color: #E8E1EF;
+    margin-bottom: 20px;
+}
+
+#user-dashboard button#logout-button {
+    background-color: #003f6b; /* Azul mais escuro para logout */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    font-size: 1em;
+    width: auto; /* Botão de logout não precisa ser full-width */
+}
+
+#user-dashboard button#logout-button:hover {
+    background-color: #002b49;
+}
+
+
+/* Estilos antigos que podem ser mantidos ou ajustados */
+h1 {
+    color: #69FFF1; /* Azul claro para o título principal */
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Ocultar secções não relevantes por defeito */
+#spotify-auth-section,
+#admin-interface-section,
+#media-info,
+.controls,
+#debug-log {
+    display: none;
+}
+
+/* Manter estilos de debug-log se necessário para desenvolvimento */
+#debug-log {
+    margin-top: 25px;
+    text-align: left;
+    max-height: 120px;
+    overflow-y: auto;
+    border: 1px solid #69FFF1;
+    padding: 12px;
+    background-color: rgba(0, 31, 51, 0.7);
+    border-radius: 6px;
+    font-size: 0.85em;
+}
+
+#debug-log h2 {
+    font-size: 1em;
+    color: #69FFF1;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+#log-list {
+    list-style-type: none;
+    padding-left: 0;
+    color: #E8E1EF;
+}
+
+#log-list li {
+    padding: 3px 0;
+    border-bottom: 1px dashed rgba(105, 255, 241, 0.2);
+    word-break: break-all;
+}
+
+#log-list li:last-child {
+    border-bottom: none;
+}
+
